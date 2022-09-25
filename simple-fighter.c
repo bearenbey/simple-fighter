@@ -28,7 +28,7 @@ void fight(void);
 void game_over(void);
 void replay(void);
 
-// ASCII Intro Screen
+// Fancy ASCII intro screen
 void game_info(void) {
   sleep(1);
   printf("\n\n");
@@ -65,6 +65,8 @@ void char_select(void) {
   }
 }
 
+
+// This is where the fight happens!
 void fight(void) {
   int selection;
   int comp_move;
@@ -192,6 +194,7 @@ void fight(void) {
   };
 }
 
+// Lazy replay.
 void replay(void) {
   int k;
   printf("\nWould you like to replay?");
@@ -211,6 +214,7 @@ int main(void) {
   char_select();
   fight();
 
+  // I need to find a better way to create a replay screen. Below is just temporary.
   int j;
   if (user_health > 0 && comp_health <= 0) {
     printf("\n\nYou won!");

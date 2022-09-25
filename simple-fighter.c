@@ -62,7 +62,7 @@ void char_select(void) {
     printf("\nYour fighter is Ryu!");
   } else {
     printf("\nYour fighter is Ken!");
-  }
+  };
 }
 
 
@@ -108,7 +108,7 @@ void fight(void) {
     } else if (selection == 3) {
       comp_move = (rand() % 1 + 1);
       if (comp_move == 1) {
-        comp_health -= HADOUKEN;
+        comp_health -= HADOUKEN + 5;
         printf("\nYour hadouken is landed well");
         printf("\nHealth: %d", comp_health);
       } else {
@@ -123,14 +123,14 @@ void fight(void) {
         printf("\nYour shoryuken is landed well!");
         printf("\nHealth: %d", comp_health);
       } else {
-        comp_health -= BLOCK;
+        comp_health -= BLOCK + 10;
         printf("\nYour shoryuken is blocked!");
         printf("\nHealth: %d", comp_health);
       }
     } else if (selection == 5) {
       comp_move = (rand() % 1 + 1);
       if (comp_move == 1) {
-        comp_health -= SENPUKYAKU;
+        comp_health -= SENPUKYAKU + 7;
         printf("\nYour senpukyaku is landed well!");
         printf("\nHealth: %d", comp_health);
       } else {
@@ -166,7 +166,7 @@ void fight(void) {
         printf("\nYou hit by a hadouken!");
         printf("\nYour Health: %d", user_health);
       } else {
-        user_health -= BLOCK;
+        user_health -= BLOCK + 5;
         printf("\nYou blocked the hadouken!");
         printf("\nYour Health: %d", user_health);
       }
@@ -176,7 +176,7 @@ void fight(void) {
         printf("\nYou hit by a shoryuken!");
         printf("\nYour Health: %d", user_health);
       } else {
-        user_health -= BLOCK;
+        user_health -= BLOCK + 10;
         printf("\nYou blocked the shoryuken!");
         printf("\nYour Health %d", user_health);
       }
@@ -186,7 +186,7 @@ void fight(void) {
         printf("\nYou hit by senpukyaku!");
         printf("\nYour Health: %d", user_health);
       } else {
-        user_health -= BLOCK;
+        user_health -= BLOCK + 7;
         printf("\nYou blocked senpukyaku!");
         printf("\nYour Health: %d", user_health);
       }
@@ -206,7 +206,7 @@ void replay(void) {
     fight();
   } else {
     printf("\nThank you for playing!");
-  }
+  };
 }
 
 int main(void) {
@@ -228,7 +228,7 @@ int main(void) {
     } else {
       printf("\nThank you for playing!\n");
       exit(0);
-    }
+    };
   } else {
     printf("\nYou lost!");
     printf("\nWould you like to play again?");
@@ -241,7 +241,7 @@ int main(void) {
     } else {
       printf("\nThank you for playing!\n");
       exit(0);
-    }
+    };
   };
 
   replay();
